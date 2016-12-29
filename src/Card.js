@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import CheckList from './CheckList';
+import marked from 'marked';
 
 class Card extends Component {
   constructor() {
@@ -19,7 +20,7 @@ class Card extends Component {
       cardDetails = (
         <div className={this.state.showDetails ?
           "card__title card__title--is-open" : "card__details"}>
-          {this.props.description}
+          <span dangerouslySetInnerHTML={{__html:marked(this.props.description)}} />
           <CheckList cardId={this.props.id} tasks={this.props.tasks} />
         </div>
       );
