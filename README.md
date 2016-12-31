@@ -1,17 +1,9 @@
-added dependencies
-==================
-yarn add react react-dom
+React Router Demo
+=====================
+A React Router project for routing members.
 
-added dev dependencies (yarn help add)
-======================================
-yarn add -D babel-cli babel-loader babel-preset-latest babel-preset-react babel-preset-stage-0 json-loader webpack webpack-dev-server
+yarn add react react-dom react-icons react-router isomorphic-fetch
 
-yarn add -D autoprefixer-loader css-loader node-sass sass-loader style-loader
+yarn add -D babel-cli babel-loader babel-preset-latest babel-preset-react babel-preset-stage-0 webpack webpack-dev-server
 
-npm install react-icons --save
-
-yarn add react-router
-
-go
-==
 yarn start
