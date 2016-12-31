@@ -8,6 +8,8 @@ yarn add -D babel-cli babel-loader babel-preset-latest babel-preset-react babel-
 
 yarn add -D autoprefixer-loader css-loader node-sass sass-loader style-loader
 
+npm install react-icons --save
+
 go
 ==
 yarn start
