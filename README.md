@@ -10,6 +10,8 @@ yarn add -D autoprefixer-loader css-loader node-sass sass-loader style-loader
 
 npm install react-icons --save
 
+yarn add react-router
+
 go
 ==
 yarn start
