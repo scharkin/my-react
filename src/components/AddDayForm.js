@@ -3,6 +3,7 @@ import React, { PropTypes, Component } from 'react'
 export const AddDayForm = ({ resort,
 							 date,
 							 powder,
+							 onNewDay,
 							 backcountry }) => {
 
 	let _resort, _date, _powder, _backcountry
@@ -13,6 +14,16 @@ export const AddDayForm = ({ resort,
 		console.log('date', _date.value)
 		console.log('powder', _powder.checked)
 		console.log('backcountry', _backcountry.checked)
+		onNewDay({
+			resort: _resort.value,
+			date: _date.value,
+			powder: _powder.checked,
+			backcountry: _backcountry.checked
+		})
+		_resort.value = ''
+		_date.value = ''
+		_powder.checked = false
+		_backcountry.checked = false
 
 	}
 
