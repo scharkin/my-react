@@ -6,16 +6,28 @@ import { createStore } from 'redux';
 import App from './App';
 import './index.css';
 
-const initialState = [
-  'Smells like spirit',
-  'Enter sandman'
-];
+const initialState = {
+  tracks: [
+    'Smells like spirit',
+    'Enter sandman'
+  ],
+  playlists: [
+    'My home playlist',
+    'My work playlist'
+  ]
+};
 function playlist(state = initialState, action) {
   if (action.type === 'ADD_TRACK') {
-    return [
+    return {
       ...state,
-      action.payload
-    ]
+      tracks: [...state.tracks, action.payload]
+    }
+  } else if (action.type === 'DELETE_TRACK') {
+    return state;
+  } else if (action.type === 'ADD_PLAYLIST') {
+    return state;
+  } else if (action.type === 'DELETE_PLAYLIST') {
+    return state;
   }
   return state;
 }
