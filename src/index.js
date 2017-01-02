@@ -7,7 +7,7 @@ import App from './App';
 import './index.css';
 
 const initialState = [
-  'Smrlls like spirit',
+  'Smells like spirit',
   'Enter sandman'
 ];
 function playlist(state = initialState, action) {
