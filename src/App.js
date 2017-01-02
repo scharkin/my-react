@@ -1,19 +1,26 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 class App extends Component {
-  submit() {
-    console.log('submit', this.testInput.value);
-  }
   render() {
+    console.log(this.props.testStore);
     return (
       <div>
-        <input type="text" placeholder="test"
-          ref={(input) => this.testInput = input}
-        />
-        <button onClick={this.submit.bind(this)}>Submit</button>
+        <input type="text" />
+        <button>Add track</button>
+        <ul>
+          {this.props.testStore.map((track, index) =>
+            <li key={index}>{track}</li>
+          )}
+        </ul>
       </div>
     )
   }
 }
 
-export default App;
+export default connect(
+  state => ({
+    testStore: state
+  }),
+  dispatch => ({})
+)(App);
